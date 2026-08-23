@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Resume Screener</title>
+
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+
+      <div>
+        <p class="eyebrow">AI RECRUITMENT TOOL</p>
+
+        <h1>
+          Smart Resume Screener
+        </h1>
+
+        <p class="subtitle">
+          Parse resumes, match candidates semantically, and rank talent with AI.
+        </p>
+      </div>
+
+      <div class="header-actions">
+
+        <a
+          href="/docs"
+          target="_blank"
+          class="api-link"
+        >
+          API Docs ↗
+        </a>
+
+        <div class="ai-status" id="aiStatus">
+          <span class="status-dot"></span>
+          Gemini AI
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- RESUME UPLOAD -->
+
+    <section class="card">
+
+      <div class="section-header">
+
+        <div>
+
+          <h2>
+            Upload Resume
+          </h2>
+
+          <p>
+            Upload a PDF or TXT resume for AI extraction.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="upload-area">
+
+        <input
+          type="file"
+          id="resumeFile"
+          accept=".pdf,.txt,application/pdf,text/plain"
+        >
+
+        <span
+          id="fileName"
+          class="file-name"
+        >
+          No file chosen
+        </span>
+
+        <button
+          id="parseResumeBtn"
+          class="primary-btn"
+          type="button"
+        >
+          Parse Resume
+        </button>
+
+      </div>
+
+
+      <div
+        id="uploadStatus"
+        class="status-message"
+      ></div>
+
+    </section>
+
+
+    <!-- PARSED CANDIDATE -->
+
+    <section
+      class="card"
+      id="candidateSection"
+    >
+
+      <div class="section-header">
+
+        <div>
+
+          <h2>
+            Parsed Candidate
+          </h2>
+
+          <p>
+            Structured information extracted from the resume.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="candidateDetails"
+        class="candidate-details"
+      >
+
+        <div class="empty-state">
+          Upload a resume to view candidate information.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- JOB DESCRIPTION -->
+
+    <section class="card">
+
+      <div class="section-header">
+
+        <div>
+
+          <h2>
+            Job Description
+          </h2>
+
+          <p>
+            Enter the role requirements for semantic candidate matching.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="jobTitle">
+          Job Title
+        </label>
+
+        <input
+          type="text"
+          id="jobTitle"
+          placeholder="e.g. AI/ML Intern"
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="jobDescription">
+          Job Description
+        </label>
+
+        <textarea
+          id="jobDescription"
+          rows="10"
+          placeholder="Paste the job description here..."
+        ></textarea>
+
+      </div>
+
+
+      <button
+        id="analyzeBtn"
+        class="primary-btn"
+        type="button"
+        disabled
+      >
+        Analyze Match
+      </button>
+
+
+      <div
+        id="matchStatus"
+        class="status-message"
+      ></div>
+
+    </section>
+
+
+    <!-- AI MATCH ANALYSIS -->
+
+    <section
+      class="card"
+      id="analysisSection"
+    >
+
+      <div class="section-header">
+
+        <div>
+
+          <h2>
+            AI Match Analysis
+          </h2>
+
+          <p>
+            Semantic comparison between the candidate and job description.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="matchResult"
+        class="match-result"
+      >
+
+        <div class="empty-state">
+          Analyze a candidate against a job description to see the result.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CANDIDATE RANKING -->
+
+    <section class="card">
+
+      <div class="section-header">
+
+        <div>
+
+          <h2>
+            Candidate Ranking
+          </h2>
+
+          <p>
+            Candidates ranked by AI-generated match score.
+          </p>
+
+        </div>
+
+
+        <button
+          id="refreshRankingBtn"
+          class="secondary-btn"
+          type="button"
+        >
+          Refresh
+        </button>
+
+      </div>
+
+
+      <div
+        id="ranking"
+        class="ranking"
+      >
+
+        <div class="empty-state">
+          No candidates ranked yet.
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- IMPORTANT: LOAD JAVASCRIPT LAST -->
+
+  <script src="/static/script.js"></script>
+
+</body>
+</html>
