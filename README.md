@@ -531,22 +531,6 @@ Candidates are ranked according to their generated match scores.
 
 ---
 
-# 🚧 Future Improvements
-
-Possible improvements include:
-
-- Batch resume processing
-- Recruiter authentication
-- Candidate comparison
-- Advanced candidate filtering
-- Multiple job-description matching
-- Persistent cloud database
-- Recruiter analytics dashboard
-- Candidate search
-- Bias and fairness evaluation
-- Production-scale deployment
-
----
 
 # 👨‍💻 Project
 
