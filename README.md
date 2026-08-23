@@ -3,6 +3,13 @@
 AI-powered resume parsing, semantic job matching, and candidate ranking using Google Gemini and FastAPI.
 
 ---
+## 🎥 Demo Video
+
+A short walkthrough demonstrating resume upload, AI-powered resume parsing, semantic job matching, match scoring, skill-gap analysis, and candidate ranking.
+
+▶️ **[Watch the Smart Resume Screener Demo](https://youtu.be/P-Y9dzZhK6g)**
+
+---
 
 ## 🚀 Overview
 
@@ -23,14 +30,6 @@ The application uses Google Gemini to extract structured information from resume
 - Generate an AI-powered justification
 - Store candidates and matching results
 - Rank candidates based on match score
-
----
-
-## 🎥 Demo Video
-
-**Coming soon**
-
-> A 2–3 minute walkthrough demonstrating resume parsing, AI matching, scoring, and candidate ranking will be added here.
 
 ---
 
@@ -325,25 +324,21 @@ smart-resume-screener/
 │   ├── database.py
 │   ├── models.py
 │   │
-│   ├── services/
-│   │   ├── pdf_parser.py
-│   │   ├── resume_parser.py
-│   │   └── matcher.py
-│   │
-│   └── static/
-│       ├── index.html
-│       ├── style.css
-│       └── script.js
+│   └── services/
+│       ├── matcher.py
+│       ├── pdf_parser.py
+│       └── resume_parser.py
 │
-├── api/
-│   └── index.py
+├── static/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
 │
 ├── run.py
 ├── requirements.txt
 ├── README.md
 ├── .env.example
-├── .gitignore
-└── vercel.json
+└── .gitignore
 ```
 
 ---
@@ -479,8 +474,6 @@ GEMINI_MODEL=gemini-2.5-flash
 
 API keys should be stored as environment variables and must not be committed to the repository.
 
-For deployment, configure environment variables through the hosting platform.
-
 ---
 
 # 📊 Example Workflow
@@ -552,24 +545,6 @@ Possible improvements include:
 - Candidate search
 - Bias and fairness evaluation
 - Production-scale deployment
-
----
-
-# 🎥 Demo
-
-The 2–3 minute demonstration will show:
-
-1. Resume upload
-2. AI resume parsing
-3. Skills, education, experience, projects, and certifications
-4. Job description input
-5. AI semantic matching
-6. Match score
-7. Strengths and skill gaps
-8. AI justification
-9. Candidate ranking
-
-**Demo Video:** Coming soon
 
 ---
 
