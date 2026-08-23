@@ -26,14 +26,6 @@ The application uses Google Gemini to extract structured information from resume
 
 ---
 
-## 🌐 Live Demo
-
-**Coming soon**
-
-> The public application URL will be added after deployment.
-
----
-
 ## 🎥 Demo Video
 
 **Coming soon**
@@ -488,29 +480,6 @@ GEMINI_MODEL=gemini-2.5-flash
 API keys should be stored as environment variables and must not be committed to the repository.
 
 For deployment, configure environment variables through the hosting platform.
-
----
-
-# ☁️ Vercel Deployment
-
-The project includes Vercel configuration for deploying the FastAPI application.
-
-After deployment, configure the following environment variables in Vercel:
-
-```text
-GEMINI_API_KEY
-GEMINI_MODEL
-```
-
-Example:
-
-```text
-GEMINI_MODEL=gemini-2.5-flash
-```
-
-The actual Gemini API key must never be committed to GitHub.
-
-> Note: SQLite is suitable for local development and demonstration, but serverless deployments should use persistent external database storage when long-term production persistence is required.
 
 ---
 
